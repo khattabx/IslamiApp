@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tool:background="@drawable/default_bg">
+
+    <ImageView
+        android:id="@+id/hadethlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="70dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/hadeth_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@+id/viewhadeth1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/hadethlogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/brown"
+        />
+
+    <TextView
+        android:id="@+id/hadethname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الاحاديث"
+        android:padding="20dp"
+        android:theme="@style/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewhadeth1" />
+
+    <View
+        android:id="@+id/viewhadeth2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@id/hadethname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/brown"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hadethrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/viewhadeth2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tool:listitem="@layout/hadethitem"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
